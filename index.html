@@ -253,7 +253,10 @@
     /* Wave divider */
     .wave-divider {
       display: block;
-      width: 100%;
+      position: relative;
+      width: 100vw;
+      left: 50%;
+      transform: translateX(-50%);
       line-height: 0;
       margin-bottom: -2px;
     }
@@ -917,7 +920,7 @@
     </div>
 
     <!-- Wave at bottom -->
-    <div class="wave-divider" style="position:absolute;bottom:-1px;left:0;right:0;">
+    <div class="wave-divider" style="position:absolute;bottom:-1px;">
       <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M-50,40 C360,80 1080,0 1490,40 L1490,80 L-50,80 Z" fill="#3D5230"/>
       </svg>
@@ -979,7 +982,7 @@
     </div>
 
     <!-- Wave bottom -->
-    <div class="wave-divider" style="position:absolute;bottom:-1px;left:0;right:0;">
+    <div class="wave-divider" style="position:absolute;bottom:-1px;">
       <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M-50,40 C360,0 1080,80 1490,40 L1490,80 L-50,80 Z" fill="#EBDFCE"/>
       </svg>
