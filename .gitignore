@@ -1,0 +1,5 @@
+temporary_screenshots/
+test_icon.html
+__pycache__/
+*.py
+.env
