@@ -714,6 +714,91 @@
       text-align: center;
     }
 
+    /* ─── INFO CARDS ─────────────────────────────── */
+    .info-section {
+      background: var(--sand);
+      padding: 6rem 2rem;
+    }
+
+    .info-cards {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .info-card {
+      background: var(--cream);
+      border: 1px solid rgba(178,189,163,0.3);
+      padding: 2.8rem 2.8rem 3rem;
+    }
+
+    .info-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.45rem;
+      font-weight: 500;
+      color: var(--forest-dark);
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(178,189,163,0.4);
+    }
+
+    .info-hours {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .info-hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      font-weight: 300;
+    }
+
+    .info-hours-row .day {
+      color: var(--text-dark);
+      font-weight: 400;
+      min-width: 80px;
+    }
+
+    .info-hours-row .time {
+      color: var(--stone);
+    }
+
+    .info-payments {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .info-payment-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      font-weight: 300;
+    }
+
+    .info-payment-item::before {
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--sage);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 640px) {
+      .info-cards { grid-template-columns: 1fr; }
+      .info-card  { padding: 2rem 1.8rem 2.2rem; }
+    }
+
     /* ─── FOOTER ─────────────────────────────────── */
     footer {
       background: var(--forest-dark);
@@ -877,6 +962,7 @@
       <li><a href="#postup">Postup</a></li>
       <li><a href="#rezervace">Kontakt</a></li>
       <li><a href="#formular">Napište nám</a></li>
+      <li><a href="#oteviraci-doba">Otevírací doba</a></li>
     </ul>
 
     <a href="https://centrum-zdravi-renata-smolikova2.reservio.com/services" target="_blank" rel="noopener" class="nav-cta">Rezervovat</a>
@@ -1019,7 +1105,7 @@
         </svg>
         <h3 class="service-title">Sportovní masáž</h3>
         <p class="service-text">Cílená práce s přetíženými svaly a fasciemi pro rychlejší regeneraci, prevenci zranění a zlepšení sportovního výkonu.</p>
-        <span class="service-duration">30 – 90 min</span>
+        <span class="service-duration">30 – 120 min</span>
       </div>
 
       <!-- 2. Relaxační masáž -->
@@ -1041,7 +1127,7 @@
         </svg>
         <h3 class="service-title">Relaxační masáž</h3>
         <p class="service-text">Jemná masáž celého těla s přírodními oleji, která uvolňuje napětí, zklidňuje nervový systém a navozuje hluboký klid.</p>
-        <span class="service-duration">30 – 90 min</span>
+        <span class="service-duration">30 – 120 min</span>
       </div>
 
       <!-- 3. Ajurvédské masáže -->
@@ -1060,7 +1146,7 @@
         </svg>
         <h3 class="service-title">Ajurvédské masáže</h3>
         <p class="service-text">Tradiční indické masážní techniky pracující s tělesnými doshy. Obnovují rovnováhu těla, mysli i ducha prostřednictvím teplých olejů.</p>
-        <span class="service-duration">30 – 90 min</span>
+        <span class="service-duration">30 – 120 min</span>
       </div>
 
       <!-- 4. Měkké techniky -->
@@ -1076,7 +1162,7 @@
         </svg>
         <h3 class="service-title">Měkké techniky</h3>
         <p class="service-text">Šetrné manuální metody zaměřené na uvolnění fascií, pojivových tkání a kloubů. Vhodné při chronickém napětí a pohybových omezeních.</p>
-        <span class="service-duration">30 – 90 min</span>
+        <span class="service-duration">30 – 120 min</span>
       </div>
 
       <!-- 5. Marmová terapie -->
@@ -1096,7 +1182,7 @@
         </svg>
         <h3 class="service-title">Marmová terapie</h3>
         <p class="service-text">Ajurvédská práce s marmovými body — energetickými uzly těla. Stimuluje přirozenou vitální energii a podporuje hlubokou obnovu organismu.</p>
-        <span class="service-duration">30 – 90 min</span>
+        <span class="service-duration">30 – 120 min</span>
       </div>
 
       <!-- 6. Manuální lymfatická drenáž -->
@@ -1117,7 +1203,7 @@
         </svg>
         <h3 class="service-title">Manuální lymfatická drenáž</h3>
         <p class="service-text">Jemná rytmická technika podporující tok lymfy a odstraňování toxinů. Posiluje imunitu, snižuje otoky a urychluje rekonvalescenci.</p>
-        <span class="service-duration">30 – 90 min</span>
+        <span class="service-duration">30 – 120 min</span>
       </div>
 
     </div>
@@ -1235,6 +1321,50 @@
 
         <p class="form-success" id="form-success">Děkujeme! Vaše zpráva byla odeslána. Ozveme se co nejdříve.</p>
       </form>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       INFO CARDS
+  ═══════════════════════════════════════════ -->
+  <section class="info-section" id="oteviraci-doba">
+    <div class="info-cards">
+
+      <!-- Otevírací doba -->
+      <div class="info-card fade-up">
+        <p class="info-card-title">Otevírací doba</p>
+        <div class="info-hours">
+          <div class="info-hours-row">
+            <span class="day">Pondělí</span>
+            <span class="time">7:00 – 18:00</span>
+          </div>
+          <div class="info-hours-row">
+            <span class="day">Úterý – Středa</span>
+            <span class="time">7:00 – 16:00</span>
+          </div>
+          <div class="info-hours-row">
+            <span class="day">Čtvrtek – Pátek</span>
+            <span class="time">7:00 – 18:00</span>
+          </div>
+          <div class="info-hours-row">
+            <span class="day">Sobota – Neděle</span>
+            <span class="time">na dotaz</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Platební metody -->
+      <div class="info-card fade-up">
+        <p class="info-card-title">Platební metody</p>
+        <div class="info-payments">
+          <div class="info-payment-item">Hotově</div>
+          <div class="info-payment-item">Kartou</div>
+          <div class="info-payment-item">Up Edenred benefity</div>
+          <div class="info-payment-item">Up Cadhoc</div>
+          <div class="info-payment-item">Up Unišek Plus</div>
+        </div>
+      </div>
+
     </div>
   </section>
 
